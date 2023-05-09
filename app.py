@@ -20,7 +20,7 @@ def main():
     pdf_flies = ["FLP_general_handbook.pdf","flp_g_direct.pdf"]
     
     # extract the text
-    if pdf is not None:
+    if pdf_flies is not None:
       for pdf_file in pdf_files:
         pdf_reader = PdfReader(pdf)
         text = ""
