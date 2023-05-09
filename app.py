@@ -53,8 +53,9 @@ def main():
            
         st.write(response)
 
-        st.write("By Sam Kobrin, REE Analytics Team")
-    
+  st.write("By Sam Kobrin, REE Analytics Team")
+  st.write("Data for prototype from from USDA Farm Loan Program handbooks")
+  
 
 if __name__ == '__main__':
     main()
