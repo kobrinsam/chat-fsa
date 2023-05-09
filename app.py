@@ -17,7 +17,7 @@ def main():
     st.header("A chatbot trained on USDA Farm Service Agency handbooks")
     
     # upload file
-    pdf_files = ["FLP_general_handbook.pdf","flp_g_direct.pdf"]
+    pdf_files = ["FLP_general_handbook.pdf","flp_g_direct.pdf", "direct_loanmaking.pdf"]
     
     # extract the text
     if pdf_files is not None:
