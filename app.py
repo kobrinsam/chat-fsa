@@ -21,7 +21,7 @@ def main():
     
     # extract the text
     if pdf_files is not None:
-      for pdf_file in pdf_files:
+      for pdf in pdf_files:
         pdf_reader = PdfReader(pdf)
         text = ""
         for page in pdf_reader.pages:
