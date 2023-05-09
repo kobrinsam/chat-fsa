@@ -9,7 +9,7 @@ from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 
 
-with st.spinner(text='Loading FSA Handbooks'):
+
 def main():
     load_dotenv()
     st.set_page_config(page_title="ChatFSA")
