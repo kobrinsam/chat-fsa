@@ -17,10 +17,10 @@ def main():
     st.header("A chatbot trained on USDA Farm Service Agency handbooks")
     
     # upload file
-    pdf_flies = ["FLP_general_handbook.pdf","flp_g_direct.pdf"]
+    pdf_files = ["FLP_general_handbook.pdf","flp_g_direct.pdf"]
     
     # extract the text
-    if pdf_flies is not None:
+    if pdf_files is not None:
       for pdf_file in pdf_files:
         pdf_reader = PdfReader(pdf)
         text = ""
