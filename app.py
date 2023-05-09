@@ -12,6 +12,7 @@ from langchain.callbacks import get_openai_callback
 def main():
     load_dotenv()
     st.set_page_config(page_title="ChatFSA")
+    st.title("Chat FSA")
     st.header("A chatbot trained on USDA Farm Service Agency handbooks")
     
     # upload file
@@ -49,6 +50,8 @@ def main():
           print(cb)
            
         st.write(response)
+
+        st.write(By Sam Kobrin, REE Analytics)
     
 
 if __name__ == '__main__':
