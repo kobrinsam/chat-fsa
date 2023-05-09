@@ -51,7 +51,7 @@ def main():
            
         st.write(response)
 
-        st.write(By Sam Kobrin, REE Analytics)
+        st.write("By Sam Kobrin, REE Analytics Team")
     
 
 if __name__ == '__main__':
