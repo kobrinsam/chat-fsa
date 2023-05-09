@@ -59,4 +59,4 @@ def main():
 if __name__ == '__main__':
     main()
 st.write("By Sam Kobrin, REE Analytics Team")
-st.write("Data for prototype from from USDA Farm Loan Program handbooks")
+st.write("Data for prototype from USDA Farm Loan Program handbooks")
