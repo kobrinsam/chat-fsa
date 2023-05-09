@@ -7,7 +7,6 @@ from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
-st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
 
 
 
