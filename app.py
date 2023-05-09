@@ -12,10 +12,10 @@ from langchain.callbacks import get_openai_callback
 def main():
     load_dotenv()
     st.set_page_config(page_title="ChatFSA")
-    st.header("A chatbot of FSA handbooks")
+    st.header("A chatbot trained on USDA Farm Service Agency handbooks")
     
     # upload file
-    pdf = st.file_uploader("Upload your PDF", type="pdf")
+    pdf = "FLP_general_handbook.pdf"
     
     # extract the text
     if pdf is not None:
@@ -38,7 +38,7 @@ def main():
       knowledge_base = FAISS.from_texts(chunks, embeddings)
       
       # show user input
-      user_question = st.text_input("Ask a question about your PDF:")
+      user_question = st.text_input("Ask a question about USDA Farm Service Agency policy:")
       if user_question:
         docs = knowledge_base.similarity_search(user_question)
         
