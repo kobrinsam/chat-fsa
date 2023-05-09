@@ -17,28 +17,29 @@ def main():
     st.header("A chatbot trained on USDA Farm Service Agency handbooks")
     
     # upload file
-    pdf = "FLP_general_handbook.pdf"
+    pdf_flies = ["FLP_general_handbook.pdf","flp_g_direct.pdf"]
     
     # extract the text
     if pdf is not None:
-      pdf_reader = PdfReader(pdf)
-      text = ""
-      for page in pdf_reader.pages:
-        text += page.extract_text()
+      for pdf_file in pdf_files:
+        pdf_reader = PdfReader(pdf)
+        text = ""
+        for page in pdf_reader.pages:
+          text += page.extract_text()
         
       # split into chunks
-      text_splitter = CharacterTextSplitter(
-        separator="\n",
-        chunk_size=1000,
-        chunk_overlap=200,
-        length_function=len
-      )
-      chunks = text_splitter.split_text(text)
-      
-      # create embeddings
-      embeddings = OpenAIEmbeddings(openai_api_key= st.secrets["openai"])
-      knowledge_base = FAISS.from_texts(chunks, embeddings)
-      
+        text_splitter = CharacterTextSplitter(
+          separator="\n",
+          chunk_size=1000,
+          chunk_overlap=200,
+          length_function=len
+        )
+        chunks = text_splitter.split_text(text)
+        
+        # create embeddings
+        embeddings = OpenAIEmbeddings(openai_api_key= st.secrets["openai"])
+        knowledge_base = FAISS.from_texts(chunks, embeddings)
+        
       # show user input
       user_question = st.text_input("Ask a question about USDA Farm Service Agency policy:")
       if user_question:
