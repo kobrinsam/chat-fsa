@@ -5,4 +5,4 @@ streamlit==1.18.1
 openai
 tiktoken
 faiss-cpu
-altair
+altair==4.0
